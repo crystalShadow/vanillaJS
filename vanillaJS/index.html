@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .flex-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15%;
+        /* position: relative; */
+    }
+    .flex-container > div{
+        /* position: absolute; */
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+        background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+    }
+    #sa{
+        text-decoration: none;
+        cursor: pointer;
+        color : #333;
+    }
+    #sa:hover{
+        text-decoration: underline;
+    }
+    #re{
+        text-decoration: none;
+        cursor: pointer;
+        color : #333;
+    }
+    #re:hover{
+        text-decoration: underline;
+    }
+    #ga{
+        text-decoration: none;
+        cursor: pointer;
+        color : #333;
+    }
+    #ga:hover{
+        text-decoration: underline;
+    }
+    #ma{
+        text-decoration: none;
+        cursor: pointer;
+        color : #333;
+    }
+    #ma:hover{
+        text-decoration: underline;
+    }
+    #pa{
+        text-decoration: none;
+        cursor: pointer;
+        color : #333;
+    }
+    #pa:hover{
+        text-decoration: underline;
+    }
+    #dha{
+        text-decoration: none;
+        cursor: pointer;
+        color : #333;
+    }
+    #dha:hover{
+        text-decoration: underline;
+    }
+    #ni{
+        text-decoration: none;
+        cursor: pointer;
+        color : #333;
+    }
+    #ni:hover{
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <audio id = "audio" src="./typical-trap-loop-140bpm-129880.mp3"></audio>
+    <audio id = "audio-sa" src="./do-80236.mp3"></audio>
+    <audio id = "audio-re"src="./re-78500.mp3"></audio>
+    <audio id = "audio-ga" src="./g6-82013.mp3"></audio>
+    <audio id = "audio-ma" src="./mi-80239.mp3"></audio>
+    <audio id = "audio-pa" src="./fa-78409.mp3"></audio>
+    <audio id = "audio-dha" src="./c3-95007.mp3"></audio>
+    <audio id = "audio-ni" src="./sol-101774.mp3"></audio>
+    <div class="flex-container">
+        
+        <div id="sa">सा</div>
+        <div id="re">रे</div>
+        <div id="ga">गा</div>
+        <div id="ma">मा</div>
+        <div id="pa">पा</div>
+        <div id="dha">धा</div>
+        <div id="ni">नि</div>
+    </div> 
+    
+    <script>
+        var divSa = document.getElementById("sa");
+        var divRe = document.getElementById("re");
+        var divGa = document.getElementById("ga");
+        var divMa = document.getElementById("ma");
+        var divPa = document.getElementById("pa");
+        var divDha = document.getElementById("dha");
+        var divNi = document.getElementById("ni");
+
+        var audio = document.getElementById("audio");
+        var audioSa = document.getElementById("audio-sa");
+        var audioRe = document.getElementById("audio-re");
+        var audioGa = document.getElementById("audio-ga")
+        var audioMa = document.getElementById("audio-ma")
+        var audioPa = document.getElementById("audio-pa");
+        var audioDha = document.getElementById("audio-dha");
+        var audioNi = document.getElementById("audio-ni");
+
+        divSa.addEventListener("click",function(){
+            audioSa.play();
+        });//this will play the audio when clicked on "SA"
+        // document.addEventListener("click", function(){
+        //     audio.play();
+        // });//this will play the audio when clicked anywhere on the webpage.
+        document.addEventListener("keydown",function(event){
+            if(event.key.toUpperCase() === "A"){
+                audio.play();
+            }
+        });//we can pass event as an arg to the function and use the event for more functionalities.
+
+        divRe.addEventListener("click",function(){
+            audioRe.play();
+        });
+        divGa.addEventListener("click",function(){
+            audioGa.play();
+        });
+        divMa.addEventListener("click",function(){
+            audioMa.play();
+        });
+        divPa.addEventListener("click",function(){
+            audioPa.play();
+        });
+        divDha.addEventListener("click",function(){
+            audioDha.play();
+        });
+        divNi.addEventListener("click",function(){
+            audioNi.play();
+        });
+    </script>
+</body>
+</html>
