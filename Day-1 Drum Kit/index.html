@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(./images/pexels-josh-sorenson-995301.jpg);
+            background-size: cover;
+        }
+        .flex-container{
+            display: flex;
+            justify-content: center;
+        align-items: center;
+        margin-top: 15%;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        /* .flex-container > div{
+            padding: 1%;
+            width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 30px;
+  border:2px solid black;
+  transition: font-size 0.3s ease;
+        } */
+        /* .flex-container > div:hover{
+            text-decoration: none;
+        cursor: pointer;
+        font-size:35px;
+        } */
+        .flex-container > div{
+            padding: 1%;
+            width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 10px;
+  font-size: 30px;
+  border:2px solid black;
+  transition: font-size 0.3s ease;
+        }
+        .flex-container>div.large{/*this class is used in JS to enlarge and apply some styles when respective buttons are clicked*/
+            text-decoration: none;
+        cursor: pointer;
+        font-size:35px;
+        border:2px solid yellow;
+        }
+        .nameOfSound{
+            color: yellow;
+            font-size: .5rem;
+            /* margin-left: 1.1px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div id="cl_hihat">
+            <h1>A</h1>
+            <span class="nameOfSound">HIHAT</span>
+        </div>
+    <!-- <h1 id="cl_hihat">A <span class="nameOfSound">HIHAT</span></h1> -->
+    <!-- <h1 id="claves">S</h1> -->
+    <div id="claves">
+        <h1>S</h1>
+        <span class="nameOfSound">CLAVES</span>
+    </div>
+    <!-- <h1 id="conga1">D</h1> -->
+    <div id="conga1">
+        <h1>D</h1>
+        <span class="nameOfSound">CONGA1</span>
+    </div>
+    <!-- <h1 id="cowbell">F</h1> -->
+    <div id="cowbell">
+        <h1>F</h1>
+        <span class="nameOfSound">COWBELL</span>
+    </div>
+    <!-- <h1 id="crashcym">G</h1> -->
+    <div id="crashcym">
+        <h1>G</h1>
+        <span class="nameOfSound">CRASHCYM</span>
+    </div>
+    <!-- <h1 id="handclap">H</h1> -->
+    <div id="handclap">
+        <h1>H</h1>
+        <span class="nameOfSound">HANDCLAP</span>
+    </div>
+    <!-- <h1 id="hi_conga">J</h1> -->
+    <div id="hi_conga">
+        <h1>J</h1>
+        <span class="nameOfSound">HICONGA</span>
+    </div>
+    <!-- <h1 id="hightom">K</h1> -->
+    <div id="hightom">
+        <h1>K</h1>
+        <span class="nameOfSound">HIGHTOM</span>
+    </div>
+    <!-- <h1 id="kick1">L</h1> -->
+    <div id="kick1">
+        <h1>L</h1>
+        <span class="nameOfSound">KICK1</span>
+    </div>
+    <!-- <h1 id="kick2">Z</h1> -->
+    <div id="kick2">
+        <h1>Z</h1>
+        <span class="nameOfSound">KICK2</span>
+    </div>
+    <!-- <h1 id="maracas">X</h1> -->
+    <div id="maracas">
+        <h1>X</h1>
+        <span class="nameOfSound">MARACAS</span>
+    </div>
+    <!-- <h1 id="open_hat">C</h1> -->
+    <div id="open_hat">
+        <h1>C</h1>
+        <span class="nameOfSound">OPENHAT</span>
+    </div>
+    <!-- <h1 id="rimshot">V</h1> -->
+    <div id="rimshot">
+        <h1>V</h1>
+        <span class="nameOfSound">RIMSHOT</span>
+    </div>
+    <!-- <h1 id="snare">B</h1> -->
+    <div id="snare">
+        <h1>B</h1>
+        <span class="nameOfSound">SNARE</span>
+    </div>
+</div>
+<audio id = "audHihat" src="./sounds/cl_hihat.wav.mp3"></audio>
+<audio id = "audClaves" src="./sounds/claves.wav.mp3"></audio>
+<audio id = "audConga1" src="./sounds/conga1.wav.mp3"></audio>
+<audio id = "audCowbell" src="./sounds/cowbell.wav.mp3"></audio>
+<audio id = "audCrashcym" src="./sounds/crashcym.wav.mp3"></audio>
+<audio id = "audHandclap" src="./sounds/handclap.wav.mp3"></audio>
+<audio id = "audHiConga" src="./sounds/hi_conga.wav.mp3"></audio>
+<audio id = "audHightom" src="./sounds/hightom.wav.mp3"></audio>
+<audio id = "audKick1" src="./sounds/kick1.wav.mp3"></audio>
+<audio id = "audKick2" src="./sounds/kick2.wav.mp3"></audio>
+<audio id = "audMaracas" src="./sounds/maracas.wav.mp3"></audio>
+<audio id = "audOpenHat" src="./sounds/open_hat.wav.mp3"></audio>
+<audio id = "audRimshot" src="./sounds/rimshot.wav.mp3"></audio>
+<audio id = "audSnare" src="./sounds/snare.wav.mp3"></audio>
+<script>
+    let audHihat = document.getElementById("audHihat");
+    let audClaves = document.getElementById("audClaves");
+    let audConga1 = document.getElementById("audConga1");
+    let audCowbell = document.getElementById("audCowbell");
+    let audCrashcym = document.getElementById("audCrashcym");
+    let audHandclap = document.getElementById("audHandclap");
+    let audHiconga = document.getElementById("audHiConga");
+    let audHightom = document.getElementById("audHightom");
+    let audKick1 = document.getElementById("audKick1");
+    let audKick2 = document.getElementById("audKick2");
+    let audMaracas = document.getElementById("audMaracas");
+    let audOpenHat = document.getElementById("audOpenHat");
+    let audRimshot = document.getElementById("audRimshot");
+    let audSnare = document.getElementById("audSnare");
+    document.addEventListener("keydown",function(event){
+        if(event.key === "a"){
+            document.getElementById("cl_hihat").classList.add("large");
+                audHihat.play();
+                setTimeout(function(){
+                    document.getElementById("cl_hihat").classList.remove("large");
+                },100);
+
+        }
+        if(event.key === "s"){
+            document.getElementById("claves").classList.add("large");
+            audClaves.play();
+            setTimeout(function(){
+                    document.getElementById("claves").classList.remove("large");
+                },100);
+        }
+        if(event.key === "d"){
+            document.getElementById("conga1").classList.add("large");
+            audConga1.play();
+            setTimeout(function(){
+                    document.getElementById("conga1").classList.remove("large");
+                },100);
+        }
+        if(event.key === "f"){
+            document.getElementById("cowbell").classList.add("large");
+            audCowbell.play();
+            setTimeout(function(){
+                    document.getElementById("cowbell").classList.remove("large");
+                },100);
+        }
+        if(event.key === "g"){
+            document.getElementById("crashcym").classList.add("large");
+            audCrashcym.play();
+            setTimeout(function(){
+                    document.getElementById("crashcym").classList.remove("large");
+                },100);
+        }
+        if(event.key === "h"){
+            document.getElementById("handclap").classList.add("large");
+            audHandclap.play();
+            setTimeout(function(){
+                    document.getElementById("handclap").classList.remove("large");
+                },100);
+        }
+        if(event.key === "j"){
+            document.getElementById("hi_conga").classList.add("large");
+            audHiconga.play();
+            setTimeout(function(){
+                    document.getElementById("hi_conga").classList.remove("large");
+                },100);
+        }
+        if(event.key === "k"){
+            document.getElementById("hightom").classList.add("large");
+            audHightom.play();
+            setTimeout(function(){
+                    document.getElementById("hightom").classList.remove("large");
+                },100);
+        }
+        if(event.key === "l"){
+            document.getElementById("kick1").classList.add("large");
+            audHihat.play();
+            setTimeout(function(){
+                    document.getElementById("kick1").classList.remove("large");
+                },100);
+        }
+        if(event.key === "z"){
+            document.getElementById("kick2").classList.add("large");
+            audKick1.play();
+            setTimeout(function(){
+                    document.getElementById("kick2").classList.remove("large");
+                },100);
+        }
+        if(event.key === "x"){
+            document.getElementById("maracas").classList.add("large");
+            audMaracas.play();
+            setTimeout(function(){
+                    document.getElementById("maracas").classList.remove("large");
+                },100);
+        }
+        if(event.key === "c"){
+            document.getElementById("open_hat").classList.add("large");
+            audOpenHat.play();
+            setTimeout(function(){
+                    document.getElementById("open_hat").classList.remove("large");
+                },100);
+        }
+        if(event.key === "v"){
+            document.getElementById("rimshot").classList.add("large");
+            audRimshot.play();
+            setTimeout(function(){
+                    document.getElementById("rimshot").classList.remove("large");
+                },100);
+        }
+        if(event.key === "b"){
+            document.getElementById("snare").classList.add("large");
+            audSnare.play();
+            setTimeout(function(){
+                    document.getElementById("snare").classList.remove("large");
+                },100);
+        }
+    });
+</script>
+</body>
+</html>
